@@ -17,17 +17,17 @@ Se necesita tener instalado [Docker](docker.com/products/docker-desktop/) y [Doc
 
 Para hacer funcionar el contenedor con la app dentro se debe ejecutar el comando en la carpeta root del proyecto:
 
-    docker-compose -f ./deploy/docker-file.yml up --build
+    docker-compose -f ./deploy/docker-compose.yml up --build
 
 ese comando construirá el contenedor descargando la imagen, cargando todos los archivos, y finalmente correrá el servidor. Si no ocurren errores se debería ver en la consola que el servidor está corriendo.
 
 Ahora, para que no quede ocupando la consola, lo detendremos y se ejecutará en modo *detach*. Para detenerlo basta con un `CTRL+C`. En caso que no funcione, en otra terminal en la carpeta del proyecto:
 
-    docker-compose -f ./deploy/docker-file.yml down
+    docker-compose -f ./deploy/docker-compose.yml down
 
 Para correrlo en modo detach, se usa el comando:
 
-    docker-compose -f ./deploy/docker-file.yml up -d
+    docker-compose -f ./deploy/docker-compose.yml up -d
 
 Mientras no se realicen cambios en el proyecto, basta con ese último comando para ejecutar el contenedor si ya está construído.
 
