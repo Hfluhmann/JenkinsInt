@@ -27,9 +27,10 @@
   </div>
   <br>
   <div>
-    <%= form.label :url_Imagen, style: "display: block" %>
-    <%= form.text_area :image %>
+    <%= form.label :Subir_Imagen, style: "display: block" %>
+    <%= form.file_field :image %>
   </div>
+  <br>
 
   <div>
     <%= form.submit "Enviar" %>
