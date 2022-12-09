@@ -2,7 +2,8 @@ require 'selenium-webdriver'
 require 'test-unit'
 class  RecipeTests < Test::Unit::TestCase
     def setup
-        @url = 'https://5450-181-43-32-119.sa.ngrok.io/'
+        @url = 'https://0002-181-43-32-119.sa.ngrok.io/'
+        @image = 'C:\Users\valer\OneDrive\Escritorio\suspiro.png'
         #constantes xpath
         @btn_ngrok = '//button'
         @btn_crear = '//a[contains(text(),"Crear Receta")]'
@@ -23,6 +24,7 @@ class  RecipeTests < Test::Unit::TestCase
         @title_form = 'recipe[title]'
         @ingredients_form = 'recipe[ingredients]'
         @instructions_form = 'recipe[instructions]'
+        @image_upload = 'recipe[image]'
         @btn_send = 'commit'
         @driver = Selenium::WebDriver.for :chrome
         @driver.get(@url)
@@ -76,6 +78,7 @@ class  RecipeTests < Test::Unit::TestCase
         title_form.clear
         title_form.send_keys("Postre limeño")
         btn_send = @driver.find_element(name: @btn_send)
+        @driver.find_element(name: @image_upload).send_keys(@image)
         btn_send.click
         sleep 2
         assert_not_nil(@driver.find_element(xpath: @confirmation_message_edit), "The recipe was not edited.")
