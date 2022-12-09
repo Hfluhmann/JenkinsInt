@@ -3,7 +3,7 @@ require 'test-unit'
 class  RecipeTests < Test::Unit::TestCase
     def setup
         @url = 'https://0002-181-43-32-119.sa.ngrok.io/'
-        @image = 'C:\Users\valer\OneDrive\Escritorio\suspiro.png'
+        @image = '/home/mrjanz/Downloads/image.png'
         #constantes xpath
         @btn_ngrok = '//button'
         @btn_crear = '//a[contains(text(),"Crear Receta")]'
