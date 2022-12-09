@@ -2,7 +2,7 @@ require 'selenium-webdriver'
 require 'test-unit'
 class  RecipeTests < Test::Unit::TestCase
     def setup
-        @url = 'https://0002-181-43-32-119.sa.ngrok.io/'
+        @url = 'https://a5e3-181-43-32-119.sa.ngrok.io'
         @image = '/home/mrjanz/Downloads/image.png'
         #constantes xpath
         @btn_ngrok = '//button'
